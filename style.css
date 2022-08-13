@@ -43,16 +43,56 @@ body {
 .image-main {
   max-width: 100%;
   border-radius: 15px;
+  z-index: 2;
 }
+
+/* .image-main:hover {
+  cursor: pointer;
+} */
 
 .top {
   margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.absolute-img {
+  height: 3em;
+  color: white;
+  display: block;
+}
+
+.absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  opacity: 0;
+  transition: 300ms ease-in-out;
+}
+
+.absolute:hover {
+  opacity: 1;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  background-color: rgb(0, 255, 255, 0.55);
 }
 
 .title {
   margin-bottom: 18px;
   font-size: 1.5em;
   letter-spacing: 1px;
+  transition: 300ms ease-in-out;
+}
+
+.title:hover {
+  color: var(--Cyan);
+  transition: 300ms ease-in-out;
 }
 
 .para {
@@ -118,4 +158,13 @@ body {
 
 .info-para span {
   margin-left: 4px;
+}
+
+.info-name {
+  transition: 300ms ease-in-out;
+}
+
+.info-name:hover {
+  color: var(--Cyan);
+  transition: 300ms ease-in-out;
 }
